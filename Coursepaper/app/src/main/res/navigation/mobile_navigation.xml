@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.myapplication.ui.home.StoryFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_newHomeFragmentFirst"
+            app:destination="@id/newHomeFragmentFirst" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.example.myapplication.ui.dashboard.PersonFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_navigation_dashboard_to_newDashboard1Fragment"
+            app:destination="@id/newDashboard1Fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.example.myapplication.ui.notifications.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/newDashboard1Fragment"
+        android:name="com.example.myapplication.ui.dashboard.NewPerson1Fragment"
+        android:label="fragment_new_dashboard1"
+        tools:layout="@layout/fragment_new_dashboard1" >
+        <action
+            android:id="@+id/action_newDashboard1Fragment_to_navigation_dashboard"
+            app:destination="@id/navigation_dashboard" />
+    </fragment>
+    <fragment
+        android:id="@+id/newHomeFragmentFirst"
+        android:name="com.example.myapplication.ui.home.NewStoryFragmentFirst"
+        android:label="fragment_new_home_first"
+        tools:layout="@layout/fragment_new_home_first" >
+        <action
+            android:id="@+id/action_newHomeFragmentFirst_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_newHomeFragmentFirst_to_newHomeFragmentSecond"
+            app:destination="@id/newHomeFragmentSecond" />
+    </fragment>
+    <fragment
+        android:id="@+id/newHomeFragmentSecond"
+        android:name="com.example.myapplication.ui.home.NewStoryFragmentSecond"
+        android:label="fragment_new_home_second"
+        tools:layout="@layout/fragment_new_home_second" >
+        <action
+            android:id="@+id/action_newHomeFragmentSecond_to_newHomeFragmentFirst"
+            app:destination="@id/newHomeFragmentFirst" />
+        <action
+            android:id="@+id/action_newHomeFragmentSecond_to_newHomeFragmentThird"
+            app:destination="@id/newHomeFragmentThird" />
+    </fragment>
+    <fragment
+        android:id="@+id/newHomeFragmentThird"
+        android:name="com.example.myapplication.ui.home.NewStoryFragmentThird"
+        android:label="NewHomeFragmentThird" >
+        <action
+            android:id="@+id/action_newHomeFragmentThird_to_newHomeFragmentSecond"
+            app:destination="@id/newHomeFragmentSecond" />
+        <action
+            android:id="@+id/action_newHomeFragmentThird_to_newHomeFragmentFourth"
+            app:destination="@id/newHomeFragmentFourth" />
+        <action
+            android:id="@+id/action_newHomeFragmentThird_to_newHomeFragmentFifth"
+            app:destination="@id/newHomeFragmentFifth" />
+    </fragment>
+    <fragment
+        android:id="@+id/newHomeFragmentFourth"
+        android:name="com.example.myapplication.ui.home.NewStoryFragmentFourth"
+        android:label="fragment_new_home_fourth"
+        tools:layout="@layout/fragment_new_home_fourth" >
+        <action
+            android:id="@+id/action_newHomeFragmentFourth_to_newHomeFragmentThird"
+            app:destination="@id/newHomeFragmentThird" />
+    </fragment>
+    <fragment
+        android:id="@+id/newHomeFragmentFifth"
+        android:name="com.example.myapplication.ui.home.NewStoryFragmentFifth"
+        android:label="fragment_new_home_fifth"
+        tools:layout="@layout/fragment_new_home_fifth" >
+        <action
+            android:id="@+id/action_newHomeFragmentFifth_to_newHomeFragmentThird"
+            app:destination="@id/newHomeFragmentThird" />
+    </fragment>
+</navigation>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Story Editor</string>
+    <string name="title_home">Story</string>
+    <string name="title_dashboard">Person</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="creating_a_quest">Создайте свой первый текстовый квест \n с нашим гайдом</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
